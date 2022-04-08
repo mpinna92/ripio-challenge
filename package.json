@@ -13,7 +13,7 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "axios": "^0.22.0",
+    "axios": "^0.26.1",
     "mobx": "^6.3.3",
     "mobx-keystone": "^0.63.1",
     "mobx-react-lite": "^3.2.1",
