@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from 'components/layout';
 import { GetServerSideProps } from 'next';
-import { getCryptos } from 'services';
+import { getBlock, getTsxList } from 'services';
 
 export interface TsxListProps {
     options: [];
@@ -10,7 +10,6 @@ export interface TsxListProps {
 
 const Tsx = ({ results }: any) => {
 
-    console.log(results)
 
     return (
         <Layout>
@@ -41,25 +40,31 @@ const Tsx = ({ results }: any) => {
     )
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ params }: any) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     let props: any = {}
-    
+    const { params, res, query } = context;
+
+    const address = params?.query;
+    const offset = query?.offset;
+    const page = query?.page;
+    res.setHeader('Set-Cookie', ['name=Vishwas'])
+
     try {
-        const res = await getCryptos({
+        const res = await getTsxList({
             params: {
                 module: 'account',
                 action: 'txlist',
-                address: `${params.tsx}`,
+                address: `${address}`,
                 startblock: '0',
-                page: '1',
-                offset: '10',
+                page: `${page}`,
+                offset: `${offset}`,
                 sort: 'desc',
             }
         })
         const errorCode = res.ok ? false : res.status
         const json = await res.json()
-
         return { props: { errorCode, results: json }, }
+
 
     } catch { props = { statusCode: 'Error' } }
 
