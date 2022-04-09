@@ -1,16 +1,21 @@
 import React from 'react';
-import { observer } from 'mobx-react-lite'
-//import { useStore } from 'stores';
+import Link from "next/link";
+import { PATHS } from 'config';
 
-export const Menu = observer(() => {
+import {
+  MenuContainer,
+  BrandWrapper,
+  BranImg
+} from './menu.styles';
 
- /*  const {
-    rootStore: { userStore }
-  } = useStore(); */
-
+export const Menu = ({ }) => {
   return (
-    <div>
-      Menu
-    </div>
-  )
-})
+    <MenuContainer>
+      <BrandWrapper>
+        <Link href={PATHS.ROOT}><a>
+          <BranImg src='/images/brand.svg' />
+        </a></Link>
+      </BrandWrapper>
+    </MenuContainer>
+  );
+};
