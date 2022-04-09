@@ -30,15 +30,24 @@ const Tsx = ({ results }: any) => {
 
     return (
         <Layout>
-            <Paginator
-                defaultRowsPerPage={tsxPerPage}
-                rowsName="Items"
-                totalItems={totalTsx}
-                onNextPage={(page) => setCurrentPage(page)}
-                onPreviousPage={(page) => setCurrentPage(page)}
-            />
+
+            {results?.message === 'OK' &&
+                <>
+                    <Paginator
+                        defaultRowsPerPage={tsxPerPage}
+                        rowsName="Items"
+                        totalItems={totalTsx}
+                        onNextPage={(page) => setCurrentPage(page)}
+                        onPreviousPage={(page) => setCurrentPage(page)}
+                    />
+                    < br/>
+                    <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
+                    < br/>
+                    < br/>
+                </>
+
+            }
             <>
-                <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
                 {(results?.status === '0' && results?.message === 'NOTOK') &&
                     <>{`Direcccion invalida :(`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
                 }
