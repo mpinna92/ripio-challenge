@@ -4,6 +4,9 @@ export const BranImg = styled.img`
   width: 170px;
   height: auto;
   display: block;
+  @media screen and (max-width: 840px) {
+    width: 200px;
+  }
   @media screen and (max-width: 640px) {
     width: 230px;
   }
@@ -29,6 +32,10 @@ export const MenuContainer = styled.nav`
   display: flex;
   justify-content: center;
   margin: 0 auto auto;
+  @media screen and (max-width: 840px) {
+    height: auto;
+    padding: 40px 0 0;
+  }
   @media screen and (max-width: 640px) {
     height: auto;
     max-width: 90%;

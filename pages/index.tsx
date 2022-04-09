@@ -1,10 +1,19 @@
 import React from 'react';
 import Head from 'next/head'
-import { Layout, Container } from 'components/layout';
+import { classes } from 'helpers';
+import { Layout } from 'components/layout';
 import Link from "next/link";
 
 
-import { HomeWrapper } from 'components/pages/home/home.styles';
+import {
+  HomeWrapper,
+  InputContainer,
+  InputWrapper,
+  Input,
+  InputText,
+  ErrorMsg
+} from 'components/pages/home/home.styles';
+import { Button } from 'components/button';
 
 const Home = ({ }) => {
 
@@ -28,34 +37,27 @@ const Home = ({ }) => {
 
       <HomeWrapper>
 
-        <Container>
+        <InputContainer>
+          <InputText>Encuentra información sobre billeteras, transacciones, bloques...</InputText>
+          <InputWrapper>
+            <Input
+              className={classes({ active: !!value })}
+              placeholder='Billeteras, transacciones, bloques...'
+              value={value}
+              onChange={e => {
+                setValue(e.target.value.replace(/\s/g, ''))
+              }}
+            />
+            {!value
+              ? <Button className='main--button' onClick={() => checkValue(value ?? '')} />
+              : <Button className='main--button' link={`/loading/request?data=${value}`} />
+            }
+          </InputWrapper>
 
-          <input
-            value={value}
-            onChange={e => {
-              setValue(e.target.value.replace(/\s/g, ''))
-            }}
-            style={{
-              width: '400px',
-              height: '50px',
-              border: '1px solid black',
-              color: 'black',
-              margin: '20px 0'
-            }}
-          />
-          {!value
-            ? <button onClick={() => checkValue(value ?? '')}>Go!</button>
-            : <Link href={`/loading/request?data=${value}`}><a>Go!</a></Link>
-          }
+          <ErrorMsg className={classes({ show: !!errorInput })}>{errorInput}</ErrorMsg>
 
+        </InputContainer>
 
-          <br />
-          {errorInput}
-
-        </Container>
-        <br />
-        0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce
-        <br /><br />
       </HomeWrapper>
     </Layout >
   )

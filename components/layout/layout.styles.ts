@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 export const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
   z-index: 2;
   position: relative;
 `;
@@ -211,7 +216,7 @@ export const GlobalStyles = css`
   }
   html {
     padding: env(safe-area-inset);
-    
+
     body {
       white-space: pre-line;
       overflow-x: hidden;

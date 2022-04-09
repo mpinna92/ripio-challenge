@@ -1,3 +1,4 @@
 export {
-  GitHubIcon
+  GitHubIcon,
+  ArrowMainButton
 } from "./icons";
