@@ -15,7 +15,7 @@ class Document extends NextDocument<Props> {
           <meta property='og:url' content='' />
           <meta property='og:type' content='' />
           <meta property='og:site_name' content='Maxi Pinna | Ripio explorer' />
-          <meta property='og:image' content='' />
+          <meta property='og:image' content='https://ripio-challenge.vercel.app/images/og_image.png' />
 
           {/* Favicon */}
           <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
