@@ -97,7 +97,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '38',
+                offset: '100',
                 sort: 'desc',
             }
         })

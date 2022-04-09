@@ -39,7 +39,7 @@ const Home = ({ }) => {
         />
         {!value
           ? <button onClick={() => checkValue(value ?? '')}>Go!</button>
-          : <Link href={`/request/${value}`}><a>Go!</a></Link>
+          : <Link href={`/loading/request?data=${value}`}><a>Go!</a></Link>
         }
 
 
