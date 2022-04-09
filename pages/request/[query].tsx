@@ -1,7 +1,11 @@
 import React from 'react';
+import Link from "next/link";
 import { Layout } from 'components/layout';
 import { GetServerSideProps } from 'next';
 import { getBlock, getTsxList } from 'services';
+
+import { Paginator } from 'components/paginator';
+import { PATHS } from 'config';
 
 export interface TsxListProps {
     options: [];
@@ -10,14 +14,40 @@ export interface TsxListProps {
 
 const Tsx = ({ results }: any) => {
 
+    // Pagination Logic
+    const totalTsx = results?.result?.length;
+    const [tsxPerPage, setTsxPerPage] = React.useState(5);
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const totalPages = Math.ceil(totalTsx / tsxPerPage);
+
+    const indexOfLastTsx = currentPage * tsxPerPage;
+    const indexOfFirstTsx = indexOfLastTsx - tsxPerPage;
+    const currentTsxs = results?.result?.slice(indexOfFirstTsx, indexOfLastTsx);
+
+    React.useEffect(() => {
+        if (currentPage > totalPages || currentPage <= 0) setCurrentPage(1)
+    }, [currentPage, totalPages]);
+
     return (
         <Layout>
+            <Paginator
+                defaultRowsPerPage={tsxPerPage}
+                rowsName="Items"
+                totalItems={totalTsx}
+                onNextPage={(page) => setCurrentPage(page)}
+                onPreviousPage={(page) => setCurrentPage(page)}
+            />
             <>
-                {(results?.status === '0' && results?.message === 'NOTOK') && <>{`Direcccion invalida :(`}</>}
-                {(results?.status === '0' && results?.message !== 'NOTOK') && <>{`No se encontraron transaccciones`}</>}
+                <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
+                {(results?.status === '0' && results?.message === 'NOTOK') &&
+                    <>{`Direcccion invalida :(`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
+                }
+                {(results?.status === '0' && results?.message !== 'NOTOK') &&
+                    <>{`No se encontraron transaccciones`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
+                }
 
                 {results?.message === 'OK' &&
-                    results?.result.map((i: any, k: number) => {
+                    currentTsxs.map((i: any, k: number) => {
                         return (
                             <>
                                 <div key={k}>
@@ -35,8 +65,9 @@ const Tsx = ({ results }: any) => {
 
                 }
 
-                {`${results?.result?.length}`}
             </>
+
+
         </Layout>
     )
 };
@@ -45,8 +76,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     let props: any = {}
     const { params, res, query } = context;
     const address = params?.query;
-    const offset = (query?.offset === undefined) || (query?.offset.toString().match(/^[0-9]+$/) != null) || (Number(query?.offset) > 30) ? '5' : query?.offset;
-    const page = query?.page === undefined ?? '1';
+    //const offset = query?.offset;
+    //const page = query?.page === undefined ?? '1';
     res.setHeader('Set-Cookie', ['name=stast'])
 
     try {
@@ -57,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '5',
+                offset: '38',
                 sort: 'desc',
             }
         })
