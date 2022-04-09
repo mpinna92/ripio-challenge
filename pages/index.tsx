@@ -27,7 +27,7 @@ return (
           margin: '20px 0'
         }}
       />
-      {value !== '' && < Link href={`/request/${value}?offset=2&page=2`} ><a>Go!</a></Link>}
+      {value !== '' && < Link href={`/request/${value}?offset=31&page=1`} ><a>Go!</a></Link>}
 
     </Container>
   </Layout >

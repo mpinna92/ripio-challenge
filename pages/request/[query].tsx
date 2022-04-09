@@ -10,7 +10,6 @@ export interface TsxListProps {
 
 const Tsx = ({ results }: any) => {
 
-
     return (
         <Layout>
             <>
@@ -35,6 +34,8 @@ const Tsx = ({ results }: any) => {
                     })
 
                 }
+
+                {`${results?.result?.length}`}
             </>
         </Layout>
     )
@@ -43,11 +44,10 @@ const Tsx = ({ results }: any) => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
     let props: any = {}
     const { params, res, query } = context;
-
     const address = params?.query;
-    const offset = query?.offset;
-    const page = query?.page;
-    res.setHeader('Set-Cookie', ['name=Vishwas'])
+    const offset = (query?.offset === undefined) || (query?.offset.toString().match(/^[0-9]+$/) != null) || (Number(query?.offset) > 30) ? '5' : query?.offset;
+    const page = query?.page === undefined ?? '1';
+    res.setHeader('Set-Cookie', ['name=stast'])
 
     try {
         const res = await getTsxList({
@@ -56,8 +56,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 action: 'txlist',
                 address: `${address}`,
                 startblock: '0',
-                page: `${page}`,
-                offset: `${offset}`,
+                page: '1',
+                offset: '5',
                 sort: 'desc',
             }
         })
