@@ -38,11 +38,11 @@ const Home = ({ }) => {
       <HomeWrapper>
 
         <InputContainer>
-          <InputText>Encuentra información sobre billeteras, transacciones, bloques...</InputText>
+          <InputText>Encuentra información sobre billeteras y transacciones...</InputText>
           <InputWrapper>
             <Input
               className={classes({ active: !!value })}
-              placeholder='Billeteras, transacciones, bloques...'
+              placeholder='Billeteras, transacciones...'
               value={value}
               onChange={e => {
                 setValue(e.target.value.replace(/\s/g, ''))
