@@ -18,7 +18,7 @@ import { Button } from 'components/button';
 const Home = ({ }) => {
 
   /* Handle principal value*/
-  const [value, setValue] = React.useState<string>();
+  const [value, setValue] = React.useState<string>('0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce');
   const [errorInput, setErrorInput] = React.useState<string>();
 
   const checkValue = (v: string) => {

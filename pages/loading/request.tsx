@@ -1,13 +1,20 @@
 import React from 'react';
-import Link from "next/link";
 import { Container, Layout } from 'components/layout';
 import { useRouter } from 'next/router'
 
 
-import { Paginator } from 'components/paginator';
-import { PATHS } from 'config';
 import { Shimmer } from 'components/shimmer';
 
+import {
+    Gradient,
+    LoadingContainer,
+    LoadingContent,
+    LoadingText,
+    LoadingAnimation,
+    EthImg,
+    CoinImg,
+    Blob
+} from 'components/pages/loading/loading.styles';
 
 const Loading = ({ }: any) => {
     const router = useRouter();
@@ -18,15 +25,19 @@ const Loading = ({ }: any) => {
     }, [])
 
     return (
-        <>
-            <Container>
-                <Shimmer variant='text h1' theme='dark'></Shimmer>
-                <Shimmer variant='text caption' theme='dark'></Shimmer>
-                <Shimmer variant='img' theme='dark'></Shimmer>
-            </Container>
-
-
-        </>
+        <Layout>
+            <LoadingContainer>
+                <Gradient />
+                <LoadingContent>
+                    <LoadingAnimation>
+                        <EthImg src='/images/eth.svg' />
+                        <CoinImg src='/images/coin.svg' />
+                    </LoadingAnimation>
+                    <LoadingText>Aguantá, estoy buscando...</LoadingText>
+                </LoadingContent>
+                <Blob />
+            </ LoadingContainer >
+        </Layout>
     )
 };
 

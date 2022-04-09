@@ -16,7 +16,7 @@ const Tsx = ({ results }: any) => {
 
     // Pagination Logic
     const totalTsx = results?.result?.length;
-    const [tsxPerPage, setTsxPerPage] = React.useState(5);
+    const [tsxPerPage, setTsxPerPage] = React.useState(15);
     const [currentPage, setCurrentPage] = React.useState(1);
     const totalPages = Math.ceil(totalTsx / tsxPerPage);
 
@@ -99,7 +99,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '100',
+                offset: '200',
                 sort: 'desc',
             }
         })
