@@ -211,8 +211,11 @@ export const GlobalStyles = css`
   }
   html {
     padding: env(safe-area-inset);
+    
     body {
       white-space: pre-line;
+      overflow-x: hidden;
+      overflow-y: auto;
       * {
         box-sizing: border-box;
         /* Google font */

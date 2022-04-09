@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
 
 export const BranImg = styled.img`
-  width: 100%;
-  max-width: 200px;
+  width: 170px;
   height: auto;
+  display: block;
+  @media screen and (max-width: 640px) {
+    width: 230px;
+  }
 `;
 
 export const BrandWrapper = styled.div`
@@ -25,5 +28,10 @@ export const MenuContainer = styled.nav`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: auto;
+  margin: 0 auto auto;
+  @media screen and (max-width: 640px) {
+    height: auto;
+    max-width: 90%;
+    padding: 40px 0;
+  }
 `;
