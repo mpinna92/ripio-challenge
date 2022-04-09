@@ -29,127 +29,54 @@ const Tsx = ({ results }: any) => {
     }, [currentPage, totalPages]);
 
     return (
-        <Layout>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis ratione illo eaque fugit a autem quasi vel quis enim error aliquid repudiandae iusto, dolor pariatur quo maxime officiis quidem.
-            {results?.message === 'OK' &&
-                <>
-                    <Paginator
-                        defaultRowsPerPage={tsxPerPage}
-                        rowsName="Items"
-                        totalItems={totalTsx}
-                        onNextPage={(page) => setCurrentPage(page)}
-                        onPreviousPage={(page) => setCurrentPage(page)}
-                    />
-                    < br/>
-                    <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
-                    < br/>
-                    < br/>
-                </>
-
-            }
-            <>
-                {(results?.status === '0' && results?.message === 'NOTOK') &&
-                    <>{`Direcccion invalida :(`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
-                }
-                {(results?.status === '0' && results?.message !== 'NOTOK') &&
-                    <>{`No se encontraron transaccciones`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
-                }
+        <Layout >
+            <div style={{ color: 'white' }}>
 
                 {results?.message === 'OK' &&
-                    currentTsxs.map((i: any, k: number) => {
-                        return (
-                            <>
-                                <div key={k}>
-                                    <p>Hash: {i?.hash}</p>
-                                    <p>From: {i?.from}</p>
-                                    <p>To: {i?.to}</p>
-                                    <p>Age: {new Date(i?.timeStamp * 1000).toLocaleString()}</p>
-                                    <br />
-                                    <br />
-                                    <br />
-                                </div>
-                            </>
-                        )
-                    })
+                    <>
+                        <Paginator
+                            defaultRowsPerPage={tsxPerPage}
+                            rowsName="Items"
+                            totalItems={totalTsx}
+                            onNextPage={(page) => setCurrentPage(page)}
+                            onPreviousPage={(page) => setCurrentPage(page)}
+                        />
+                        < br />
+                        <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
+                        < br />
+                        < br />
+                    </>
 
                 }
+                <>
+                    {(results?.status === '0' && results?.message === 'NOTOK') &&
+                        <>{`Direcccion invalida :(`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
+                    }
+                    {(results?.status === '0' && results?.message !== 'NOTOK') &&
+                        <>{`No se encontraron transaccciones`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
+                    }
 
-            </>
+                    {results?.message === 'OK' &&
+                        currentTsxs.map((i: any, k: number) => {
+                            return (
+                                <>
+                                    <div key={k}>
+                                        <p>Hash: {i?.hash}</p>
+                                        <p>From: {i?.from}</p>
+                                        <p>To: {i?.to}</p>
+                                        <p>Age: {new Date(i?.timeStamp * 1000).toLocaleString()}</p>
+                                        <br />
+                                        <br />
+                                        <br />
+                                    </div>
+                                </>
+                            )
+                        })
+
+                    }
+
+                </>
+            </div>
 
 
         </Layout>
