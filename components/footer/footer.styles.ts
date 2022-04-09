@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const TucumanText = styled.div`
-  height: 80%;
+  height: 100%;
   align-items: center;
   color: ${(props: any) => props.theme.medium};
   display: flex;
