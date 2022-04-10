@@ -12,7 +12,7 @@ import {
   Input,
   InputText,
   ErrorMsg
-} from 'components/pages/home/home.styles';
+} from 'components/pages/home.styles';
 import { Button } from 'components/button';
 
 const Home = ({ }) => {

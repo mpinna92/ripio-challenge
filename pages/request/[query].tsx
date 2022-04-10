@@ -6,6 +6,12 @@ import { getBlock, getTsxList } from 'services';
 
 import { Paginator } from 'components/paginator';
 import { PATHS } from 'config';
+import { ButtonAlt } from 'components/buttonAlt';
+
+import {
+    NoTsxWrapper,
+    NoTsxText
+} from 'components/pages/results.styles';
 
 export interface TsxListProps {
     options: [];
@@ -30,6 +36,20 @@ const Tsx = ({ results }: any) => {
 
     return (
         <Layout >
+            {(results?.status === '0' && results?.message === 'NOTOK') &&
+                <NoTsxWrapper>
+                    <NoTsxText>Direccción inválida...</NoTsxText>
+                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} />
+                </NoTsxWrapper>
+            }
+
+            {(results?.status === '0' && results?.message !== 'NOTOK') &&
+                <NoTsxWrapper>
+                    <NoTsxText>No se encontraron transaccciones...</NoTsxText>
+                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} />
+                </NoTsxWrapper>
+            }
+
             <div style={{ color: 'white' }}>
 
                 {results?.message === 'OK' &&
@@ -49,12 +69,6 @@ const Tsx = ({ results }: any) => {
 
                 }
                 <>
-                    {(results?.status === '0' && results?.message === 'NOTOK') &&
-                        <>{`Direcccion invalida :(`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
-                    }
-                    {(results?.status === '0' && results?.message !== 'NOTOK') &&
-                        <>{`No se encontraron transaccciones`} <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link></>
-                    }
 
                     {results?.message === 'OK' &&
                         currentTsxs.map((i: any, k: number) => {
@@ -99,7 +113,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '200',
+                offset: '8000',
                 sort: 'desc',
             }
         })

@@ -16,6 +16,9 @@ export const ErrorMsg = styled.div`
     opacity: 1;
     pointer-events: all;
   }
+  @media screen and (max-width: 840px) {
+    padding-left: 30px;
+  }
 `;
 
 export const InputText = styled.div`
@@ -90,14 +93,14 @@ export const InputWrapper = styled.div`
 export const InputContainer = styled.div`
   width: 100%;
   max-width: 500px;
-  margin: 0 auto 200px;
+  margin: 0 auto 100px;
   text-align: center;
   position: relative;
   @media screen and (max-width: 840px) {
     margin: 0 auto;
   }
   @media screen and (max-width: 640px) {
-    margin: 0 auto 200px;
+    margin: 0 auto 100px;
   }
 `;
 

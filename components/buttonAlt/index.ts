@@ -1,0 +1,1 @@
+export { ButtonAlt } from './buttonAlt';

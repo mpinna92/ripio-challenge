@@ -14,7 +14,7 @@ import {
     EthImg,
     CoinImg,
     Blob
-} from 'components/pages/loading/loading.styles';
+} from 'components/pages/loading.styles';
 
 const Loading = ({ }: any) => {
     const router = useRouter();

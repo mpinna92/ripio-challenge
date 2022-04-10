@@ -63,6 +63,8 @@ export const GitHubWrapper = styled.div`
     display: block;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    top: -1px;
     @media screen and (max-width: 840px) {
       width: 30px;
       margin-right: 12px;
@@ -86,7 +88,7 @@ export const FooterContainer = styled.footer`
   margin-top: auto;
   @media screen and (max-width: 640px) {
     height: auto;
-    padding: 30px 0;
+    padding: 30px 0 60px;
   }
   .align--center {
     width: 100%;
