@@ -110,7 +110,7 @@ export const PaginatorWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto 30px;
-  
+
   @media screen and (max-width: 840px) {
     flex-flow: column;
     margin: 0 auto 10px;
@@ -134,4 +134,8 @@ export const NoTsxWrapper = styled.div`
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+
+  .button {
+    margin: 0 auto;
+  }
 `;

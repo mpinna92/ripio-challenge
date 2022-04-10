@@ -121,15 +121,15 @@ const Tsx = ({ results }: any) => {
 
             {(results?.status === '0' && results?.message === 'NOTOK') &&
                 <NoTsxWrapper>
-                    <NoTsxText>Direccción inválida...</NoTsxText>
-                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} />
+                    <NoTsxText>Dirección inválida...</NoTsxText>
+                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='button'/>
                 </NoTsxWrapper>
             }
 
             {(results?.status === '0' && results?.message !== 'NOTOK') &&
                 <NoTsxWrapper>
-                    <NoTsxText>No se encontraron transaccciones...</NoTsxText>
-                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} />
+                    <NoTsxText>No se encontraron transacciones...</NoTsxText>
+                    <ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='button' />
                 </NoTsxWrapper>
             }
         </Layout>
