@@ -53,7 +53,7 @@ const Tsx = ({ results }: any) => {
             {results?.message === 'OK' &&
                 <ResultsWrapper>
                     <PaginatorWrapper>
-                        <TotalResults>{`Encontramos ${totalTsx} transacciones:`}</TotalResults>
+                        <TotalResults>Encontramos <span> {`${totalTsx}`} </span> transacciones</TotalResults>
 
                         <Paginator
                             className='paginator top'
@@ -152,7 +152,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '50',
+                offset: '100',
                 sort: 'desc',
             }
         })

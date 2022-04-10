@@ -14,7 +14,7 @@ export const ButtonWrapper = styled.a`
   font-size: 0.9rem;
   justify-content: center;
   transition: all 0.3s ease-in-out;
-  margin: 0 ;
+  margin: 0;
   padding: 0 10px;
   position: relative;
 
@@ -53,5 +53,8 @@ export const ButtonWrapper = styled.a`
   &.disabled {
     pointer-events: none;
     opacity: 0.3;
+    &:hover {
+      opacity: 0.3;
+    }
   }
 `;

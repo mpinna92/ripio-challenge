@@ -93,7 +93,12 @@ export const TotalResults = styled.div`
   font-size: 1rem;
   @media screen and (max-width: 840px) {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  span {
+    color: ${(props: any) => props.theme.primary};
+    font-weight: 600;
   }
 `;
 

@@ -39,6 +39,6 @@ export const MenuContainer = styled.nav`
   @media screen and (max-width: 640px) {
     height: auto;
     max-width: 90%;
-    padding: 40px 0;
+    padding: 40px 0 20px;
   }
 `;
