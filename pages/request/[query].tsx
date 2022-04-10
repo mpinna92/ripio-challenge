@@ -1,17 +1,28 @@
 import React from 'react';
 import Link from "next/link";
-import { Layout } from 'components/layout';
+import { Container, Layout } from 'components/layout';
 import { GetServerSideProps } from 'next';
 import { getBlock, getTsxList } from 'services';
 
-import { Paginator } from 'components/paginator';
 import { PATHS } from 'config';
+import { classes, useMergeState } from 'helpers';
+
+import { Paginator } from 'components/paginator';
 import { ButtonAlt } from 'components/buttonAlt';
 
 import {
     NoTsxWrapper,
-    NoTsxText
+    NoTsxText,
+    ResultsWrapper,
+    ResultList,
+    ResultCard,
+    CardItem,
+    PaginatorWrapper,
+    TotalResults,
+    Status,
+    Copy
 } from 'components/pages/results.styles';
+import { CopyIcon } from 'components/icons';
 
 export interface TsxListProps {
     options: [];
@@ -19,10 +30,11 @@ export interface TsxListProps {
 }
 
 const Tsx = ({ results }: any) => {
+    console.log(results?.result)
 
     // Pagination Logic
     const totalTsx = results?.result?.length;
-    const [tsxPerPage, setTsxPerPage] = React.useState(15);
+    const [tsxPerPage, setTsxPerPage] = React.useState(10);
     const [currentPage, setCurrentPage] = React.useState(1);
     const totalPages = Math.ceil(totalTsx / tsxPerPage);
 
@@ -34,8 +46,65 @@ const Tsx = ({ results }: any) => {
         if (currentPage > totalPages || currentPage <= 0) setCurrentPage(1)
     }, [currentPage, totalPages]);
 
+
+    /*Handle copy button*/
+
     return (
         <Layout >
+
+            {results?.message === 'OK' &&
+                <ResultsWrapper>
+                    <PaginatorWrapper>
+
+                        <TotalResults>{`Encontramos ${totalTsx} transacciones:`}</TotalResults>
+
+                        <Paginator
+                            defaultRowsPerPage={tsxPerPage}
+                            rowsName="Página"
+                            totalItems={totalTsx}
+                            onNextPage={(page) => setCurrentPage(page)}
+                            onPreviousPage={(page) => setCurrentPage(page)}
+                        />
+
+                    </PaginatorWrapper>
+
+
+                    <ResultList>
+                        {currentTsxs.map((i: any, key: number) => {
+                            return (
+                                <ResultCard key={key}>
+                                    <CardItem >
+                                        <b>TsxHash:</b><span>{i?.hash}</span>
+                                        <Copy
+                                            data-tooltip={`Copiar`}>
+                                            <CopyIcon />
+                                        </Copy>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Bloque Nº:</b><span>{i?.blockNumber}</span>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Desde:</b><span>{i?.from}</span>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Hacia:</b><span>{i?.to}</span>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Edad:</b><span>{new Date(i?.timeStamp * 1000).toLocaleString()}</span>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Status:</b>
+                                        <span>{i?.txreceipt_status === '1' ? <Status className='success'>IN</Status> : <Status className='success'>OUT</Status>}</span>
+                                    </CardItem>
+                                </ResultCard>
+                            )
+                        })}
+                    </ResultList>
+
+                </ResultsWrapper>
+            }
+
+
             {(results?.status === '0' && results?.message === 'NOTOK') &&
                 <NoTsxWrapper>
                     <NoTsxText>Direccción inválida...</NoTsxText>
@@ -49,50 +118,6 @@ const Tsx = ({ results }: any) => {
                     <ButtonAlt text='Volver al home!' link={PATHS.ROOT} />
                 </NoTsxWrapper>
             }
-
-            <div style={{ color: 'white' }}>
-
-                {results?.message === 'OK' &&
-                    <>
-                        <Paginator
-                            defaultRowsPerPage={tsxPerPage}
-                            rowsName="Items"
-                            totalItems={totalTsx}
-                            onNextPage={(page) => setCurrentPage(page)}
-                            onPreviousPage={(page) => setCurrentPage(page)}
-                        />
-                        < br />
-                        <Link href={PATHS.ROOT} ><a>Volver al home!</a></Link>
-                        < br />
-                        < br />
-                    </>
-
-                }
-                <>
-
-                    {results?.message === 'OK' &&
-                        currentTsxs.map((i: any, k: number) => {
-                            return (
-                                <>
-                                    <div key={k}>
-                                        <p>Hash: {i?.hash}</p>
-                                        <p>From: {i?.from}</p>
-                                        <p>To: {i?.to}</p>
-                                        <p>Age: {new Date(i?.timeStamp * 1000).toLocaleString()}</p>
-                                        <br />
-                                        <br />
-                                        <br />
-                                    </div>
-                                </>
-                            )
-                        })
-
-                    }
-
-                </>
-            </div>
-
-
         </Layout>
     )
 };
@@ -113,7 +138,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '8000',
+                offset: '30',
                 sort: 'desc',
             }
         })

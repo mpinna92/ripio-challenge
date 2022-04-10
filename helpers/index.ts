@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 type ClassCondition = { [key: string]: boolean | undefined };
 type ClassType = undefined | string | string[] | ClassCondition;
 
@@ -10,9 +11,9 @@ export const classes = (...args: ClassType[]): string => {
 
     const argType = typeof arg;
 
-    if (argType === 'string' || argType === 'number') {
+    if (argType === "string" || argType === "number") {
       classes.push(arg);
-    } else if (argType === 'object') {
+    } else if (argType === "object") {
       for (const key of Object.keys(arg)) {
         if ((arg as ClassCondition)[key]) {
           classes.push(key);
@@ -20,19 +21,34 @@ export const classes = (...args: ClassType[]): string => {
       }
     }
   }
-  return classes.join(' ');
+  return classes.join(" ");
 };
 
 export const getCookie = (c_name: string) => {
-  let c_value: string | null = ' ' + document.cookie;
-  let c_start = c_value.indexOf(' ' + c_name + '=');
+  let c_value: string | null = " " + document.cookie;
+  let c_start = c_value.indexOf(" " + c_name + "=");
   if (c_start === -1) {
     c_value = null;
   } else {
-    c_start = c_value.indexOf('=', c_start) + 1;
-    var c_end = c_value.indexOf(';', c_start);
+    c_start = c_value.indexOf("=", c_start) + 1;
+    var c_end = c_value.indexOf(";", c_start);
     if (c_end === -1) c_end = c_value.length;
     c_value = unescape(c_value.substring(c_start, c_end));
   }
   return c_value;
 };
+
+export function useMergeState<T>(
+  initialState: T
+): [T, (newState: Partial<T>) => void, any] {
+  const [state, setState] = useState(initialState);
+  const dataRef: any = useRef(initialState);
+  const setMergedState = (newState: Partial<T>) => {
+    setState((prevState) => {
+      const mergeState = Object.assign({}, prevState, newState);
+      dataRef.current = mergeState;
+      return mergeState;
+    });
+  };
+  return [state, setMergedState, dataRef];
+}

@@ -221,6 +221,21 @@ export const GlobalStyles = css`
       white-space: pre-line;
       overflow-x: hidden;
       overflow-y: auto;
+
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 30px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #6d07e6;
+      }
+      ::-webkit-scrollbar-track {
+        background: #242424;
+      }
+
+      /* Firefox */
+      scrollbar-width: thin;
+      scrollbar-color: #6d07e6 #242424;
       * {
         box-sizing: border-box;
         /* Google font */

@@ -43,7 +43,7 @@ export const Paginator = ({
 
   return (
     <PaginatorContainer className={className}>
-      <div>{currentPage} of {totalPages}</div>
+      <div>{`${rowsName} ${currentPage} de ${totalPages}`}</div>
 
       <div>
         <button

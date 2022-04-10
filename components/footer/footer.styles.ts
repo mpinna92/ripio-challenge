@@ -10,6 +10,9 @@ export const TucumanText = styled.div`
   font-weight: 700;
   justify-content: flex-end;
   white-space: nowrap;
+  &:hover {
+    cursor: url("/images/doge.png"), auto;
+  }
   @media screen and (max-width: 840px) {
     font-size: 1rem;
   }
@@ -26,9 +29,6 @@ export const TucumanText = styled.div`
     margin: 0 5px;
     position: relative;
     top: 2px;
-  }
-  &:hover {
-    cursor: url("/images/doge.png"), auto;
   }
 `;
 
