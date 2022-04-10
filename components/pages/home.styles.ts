@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import motion from 'framer-motion'
 
 export const TestTsx = styled.div`
   font-size: 1.2rem;
