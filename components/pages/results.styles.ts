@@ -76,10 +76,10 @@ export const ResultsWrapper = styled.div`
   }
 
   .paginator {
-    margin: 40px auto;
-
     &.top {
-      margin: 40px auto 15px;
+      @media screen and (max-width: 840px) {
+        margin: 40px auto 15px;
+      }
     }
     &.bottom {
       margin: -10px auto 40px;
@@ -109,10 +109,11 @@ export const PaginatorWrapper = styled.div`
   line-height: initial;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 20px;
-
+  margin: 0 auto 30px;
+  
   @media screen and (max-width: 840px) {
     flex-flow: column;
+    margin: 0 auto 10px;
   }
 `;
 
