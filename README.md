@@ -29,6 +29,6 @@ Puedes verlo 🔗[aquí](https://ripio-challenge.vercel.app/)
 ## ⚙ Build
 🧙‍♂️ NextJS  
 💅 Styled components  
-✨ SSR (Server Side Renderin)  
+✨ SSR (Server Side Rendering)  
 🔗 Dynamic routing  
 🌐 Vercel App

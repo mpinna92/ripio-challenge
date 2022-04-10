@@ -1,9 +1,6 @@
 import React from 'react';
-import { Container, Layout } from 'components/layout';
+import { Layout } from 'components/layout';
 import { useRouter } from 'next/router'
-
-
-import { Shimmer } from 'components/shimmer';
 
 import {
     Gradient,
@@ -35,7 +32,7 @@ const Loading = ({ }: any) => {
                         <EthImg src='/images/eth.svg' />
                         <CoinImg src='/images/coin.svg' />
                     </LoadingAnimation>
-                    <LoadingText>Aguantá, estamos buscando...</LoadingText>
+                    <LoadingText>Espera un momento por favor, estamos buscando...</LoadingText>
                 </LoadingContent>
                 <Blob />
             </ LoadingContainer >

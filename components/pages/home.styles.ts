@@ -1,5 +1,22 @@
 import styled from "@emotion/styled";
 
+export const TestTsx = styled.div`
+  font-size: 1.2rem;
+  font-family: ${(props: any) => props.theme.fonts.SpaceMono};
+  color: ${(props: any) => props.theme.medium};
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  p {
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: ${(props: any) => props.theme.fonts.SpaceMono};
+    color: ${(props: any) => props.theme.medium};
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+`;
+
 export const TestTsxWrapper = styled.div`
   width: 100%;
   max-width: 500px;
@@ -15,23 +32,13 @@ export const TestTsxWrapper = styled.div`
     -8px -8px 16px 0 rgba(100, 93, 110, 0.07);
   padding: 10px;
 
-  span {
-    font-size: 1.2rem;
-    font-family: ${(props: any) => props.theme.fonts.SpaceMono};
-    color: ${(props: any) => props.theme.medium};
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    p {
-      font-size: 0.7rem;
-      font-weight: 600;
-      font-family: ${(props: any) => props.theme.fonts.SpaceMono};
-      color: ${(props: any) => props.theme.medium};
-      margin-bottom: 8px;
-      text-transform: uppercase;
+  .copy--home {
+    border-color: ${(props: any) => props.theme.lightGray};
+    svg {
+      transition: all 0.3s ease-in-out;
+      color: ${(props: any) => props.theme.lightGray};
     }
   }
-
 `;
 
 export const ErrorMsg = styled.div`

@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head'
 import { classes } from 'helpers';
 import { Layout } from 'components/layout';
-import Link from "next/link";
 
 import { Button } from 'components/button';
 import { CopyButton } from 'components/copyButton';
@@ -14,7 +13,8 @@ import {
   Input,
   InputText,
   ErrorMsg,
-  TestTsxWrapper
+  TestTsxWrapper,
+  TestTsx
 } from 'components/pages/home.styles';
 
 const Home = ({ }) => {
@@ -60,11 +60,11 @@ const Home = ({ }) => {
 
         </InputContainer>
         <TestTsxWrapper>
-          <span>
-            <p>Para testear (de nada 😉)</p>
+          <TestTsx>
+            <p>Usame para testear 😉</p>
             0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce
-            </span>
-          <CopyButton value='0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce'></CopyButton>
+          </TestTsx>
+          <CopyButton className='copy--home' value='0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce'></CopyButton>
         </TestTsxWrapper>
 
       </HomeWrapper>

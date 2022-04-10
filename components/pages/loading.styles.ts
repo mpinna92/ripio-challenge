@@ -95,8 +95,8 @@ export const LoadingAnimation = styled.div`
 `;
 
 export const LoadingText = styled.div`
-  width: 100%;
-  max-width: 90%;
+  width: 90%;
+  max-width: 400px;
   color: ${(props: any) => props.theme.white};
   font-size: 1.5rem;
   font-family: ${(props: any) => props.theme.fonts.SpaceMono};
