@@ -1,6 +1,7 @@
+import React from 'react';
+
 import { GitHubIcon } from 'components/icons';
 import { Container } from 'components/layout';
-import React from 'react';
 
 import {
   FooterContainer,

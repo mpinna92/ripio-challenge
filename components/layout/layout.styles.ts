@@ -241,6 +241,7 @@ export const GlobalStyles = css`
         /* Google font */
         font-family: "Rubik", sans-serif;
         font-weight: normal;
+        -webkit-tap-highlight-color: transparent;
       }
     }
   }

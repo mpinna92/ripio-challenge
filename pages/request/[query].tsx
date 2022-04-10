@@ -19,10 +19,9 @@ import {
     CardItem,
     PaginatorWrapper,
     TotalResults,
-    Status,
-    Copy
+    Status
 } from 'components/pages/results.styles';
-import { CopyIcon } from 'components/icons';
+import { CopyButton } from 'components/copyButton';
 
 export interface TsxListProps {
     options: [];
@@ -34,7 +33,7 @@ const Tsx = ({ results }: any) => {
 
     // Pagination Logic
     const totalTsx = results?.result?.length;
-    const [tsxPerPage, setTsxPerPage] = React.useState(10);
+    const [tsxPerPage, setTsxPerPage] = React.useState(5);
     const [currentPage, setCurrentPage] = React.useState(1);
     const totalPages = Math.ceil(totalTsx / tsxPerPage);
 
@@ -55,42 +54,46 @@ const Tsx = ({ results }: any) => {
             {results?.message === 'OK' &&
                 <ResultsWrapper>
                     <PaginatorWrapper>
-
                         <TotalResults>{`Encontramos ${totalTsx} transacciones:`}</TotalResults>
 
                         <Paginator
+                            className='paginator top'
                             defaultRowsPerPage={tsxPerPage}
                             rowsName="Página"
                             totalItems={totalTsx}
                             onNextPage={(page) => setCurrentPage(page)}
                             onPreviousPage={(page) => setCurrentPage(page)}
                         />
-
                     </PaginatorWrapper>
-
 
                     <ResultList>
                         {currentTsxs.map((i: any, key: number) => {
                             return (
                                 <ResultCard key={key}>
                                     <CardItem >
-                                        <b>TsxHash:</b><span>{i?.hash}</span>
-                                        <Copy
-                                            data-tooltip={`Copiar`}>
-                                            <CopyIcon />
-                                        </Copy>
+                                        <b>TsxHash:</b><span>🔗 {i?.hash}</span>
+                                        <CopyButton value={i?.hash} />
                                     </CardItem>
                                     <CardItem >
-                                        <b>Bloque Nº:</b><span>{i?.blockNumber}</span>
+                                        <b>Bloque Nº:</b><span>⛏️ {i?.blockNumber}</span>
                                     </CardItem>
                                     <CardItem >
-                                        <b>Desde:</b><span>{i?.from}</span>
+                                        <b>Hash de Bloque:</b><span>🔗 {i?.blockHash}</span>
+                                        <CopyButton value={i?.blockHash} />
                                     </CardItem>
                                     <CardItem >
-                                        <b>Hacia:</b><span>{i?.to}</span>
+                                        <b>Gas usado:</b><span>⛽ {i?.gasUsed} </span>
                                     </CardItem>
                                     <CardItem >
-                                        <b>Edad:</b><span>{new Date(i?.timeStamp * 1000).toLocaleString()}</span>
+                                        <b>Desde:</b><span>↗️ {i?.from} </span>
+                                        <CopyButton value={i?.from} />
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Hacia:</b><span>↘️ {i?.to}</span>
+                                        <CopyButton value={i?.to} />
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Edad:</b><span>⌛ {new Date(i?.timeStamp * 1000).toLocaleString()}</span>
                                     </CardItem>
                                     <CardItem >
                                         <b>Status:</b>
@@ -100,6 +103,15 @@ const Tsx = ({ results }: any) => {
                             )
                         })}
                     </ResultList>
+
+                    <Paginator
+                        className='paginator bottom'
+                        defaultRowsPerPage={tsxPerPage}
+                        rowsName="Página"
+                        totalItems={totalTsx}
+                        onNextPage={(page) => setCurrentPage(page)}
+                        onPreviousPage={(page) => setCurrentPage(page)}
+                    />
 
                 </ResultsWrapper>
             }

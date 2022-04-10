@@ -23,62 +23,6 @@ export const Status = styled.div`
   }
 `;
 
-export const Copy = styled.div`
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  border-radius: 100%;
-  border: 1px solid ${(props: any) => props.theme.primary};
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-left: 10px;
-  position: relative;
-  &::after {
-    width: auto;
-    align-items: center;
-    background-color: ${(props: any) => props.theme.primary};
-    border-radius: 4px;
-    color: ${(props: any) => props.theme.white};
-    content: attr(data-tooltip);
-    display: flex;
-    flex: 0 0 auto;
-    font-size: 0.65rem;
-    justify-content: center;
-    opacity: 0;
-    padding: 3px 5px;
-    pointer-events: none;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-50%);
-    position: absolute;
-    left: 50%;
-    top: -20px;
-  }
-  svg {
-    width: 14px;
-    height: auto;
-    color: ${(props: any) => props.theme.primary};
-    position: relative;
-    top: -1px;
-    left: 1px;
-    g {
-      path {
-        stroke: ${(props: any) => props.theme.primary};
-      }
-    }
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  &.active {
-    pointer-events: none;
-    &::after {
-      top: -23px;
-      opacity: 1;
-    }
-  }
-`;
-
 export const CardItem = styled.div`
   width: 100%;
   align-items: center;
@@ -107,7 +51,7 @@ export const CardItem = styled.div`
 
 export const ResultCard = styled.div`
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   border-radius: 15px;
   border: 2.5px solid ${(props: any) => props.theme.primary}30;
   border-bottom: 8px solid ${(props: any) => props.theme.primary}30;
@@ -136,6 +80,10 @@ export const TotalResults = styled.div`
   width: 100%;
   color: ${(props: any) => props.theme.white};
   font-size: 1rem;
+  @media screen and (max-width: 840px) {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
 `;
 
 export const PaginatorWrapper = styled.div`
@@ -146,6 +94,17 @@ export const PaginatorWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto 20px;
+
+  @media screen and (max-width: 840px) {
+    flex-flow: column;
+  }
+  .paginator {
+    margin: 40px auto;
+
+    &.top {
+      margin: 40px auto;
+    }
+  }
 `;
 
 export const NoTsxText = styled.div`

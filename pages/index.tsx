@@ -11,14 +11,16 @@ import {
   InputWrapper,
   Input,
   InputText,
-  ErrorMsg
+  ErrorMsg,
+  TestTsxWrapper
 } from 'components/pages/home.styles';
 import { Button } from 'components/button';
+import { CopyButton } from 'components/copyButton';
 
 const Home = ({ }) => {
 
   /* Handle principal value*/
-  const [value, setValue] = React.useState<string>('0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce');
+  const [value, setValue] = React.useState<string>('');
   const [errorInput, setErrorInput] = React.useState<string>();
 
   const checkValue = (v: string) => {
@@ -57,6 +59,13 @@ const Home = ({ }) => {
           <ErrorMsg className={classes({ show: !!errorInput })}>{errorInput}</ErrorMsg>
 
         </InputContainer>
+        <TestTsxWrapper>
+          <span>
+            <p>Para testear (de nada 😉)</p>
+            0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce
+            </span>
+          <CopyButton value='0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce'></CopyButton>
+        </TestTsxWrapper>
 
       </HomeWrapper>
     </Layout >

@@ -1,5 +1,42 @@
 import styled from "@emotion/styled";
 
+export const TestTsxWrapper = styled.div`
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+  background-color: ${(props: any) => props.theme.medium}30;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  border: 1px solid ${(props: any) => props.theme.medium}30;
+  border-bottom: 3px solid ${(props: any) => props.theme.medium}30;
+  box-shadow: 12px 12px 16px 0 rgba(100, 93, 110, 0.07),
+    -8px -8px 16px 0 rgba(100, 93, 110, 0.07);
+  padding: 10px;
+
+  span {
+    font-size: 1.2rem;
+    font-family: ${(props: any) => props.theme.fonts.SpaceMono};
+    color: ${(props: any) => props.theme.medium};
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    p {
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: ${(props: any) => props.theme.fonts.SpaceMono};
+      color: ${(props: any) => props.theme.medium};
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 90%;
+  }
+`;
+
 export const ErrorMsg = styled.div`
   width: 100%;
   color: ${(props: any) => props.theme.error};
@@ -93,14 +130,14 @@ export const InputWrapper = styled.div`
 export const InputContainer = styled.div`
   width: 100%;
   max-width: 500px;
-  margin: 0 auto 100px;
+  margin: 0 auto 20px;
   text-align: center;
   position: relative;
   @media screen and (max-width: 840px) {
     margin: 0 auto;
   }
   @media screen and (max-width: 640px) {
-    margin: 0 auto 100px;
+    margin: 0 auto 20px;
   }
 `;
 
@@ -110,6 +147,7 @@ export const HomeWrapper = styled.div`
   height: 100%;
   align-items: center;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   margin: 0 auto;
 `;
