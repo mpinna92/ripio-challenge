@@ -2,8 +2,10 @@ import React from 'react';
 import { classes } from 'helpers';
 
 import {
-  PaginatorContainer
+  PaginatorContainer,
+  TotalPages
 } from './paginator.styles';
+import { ButtonAlt } from 'components/buttonAlt';
 
 export interface PaginatorProps {
   className?: string;
@@ -14,7 +16,7 @@ export interface PaginatorProps {
   onPreviousPage: (currentPage: number, rowsPerPage: number) => void;
 }
 
-export const Paginator = ({ 
+export const Paginator = ({
   defaultRowsPerPage = 10,
   className,
   rowsName = 'Rows',
@@ -43,23 +45,21 @@ export const Paginator = ({
 
   return (
     <PaginatorContainer className={className}>
-      <div>{`${rowsName} ${currentPage} de ${totalPages}`}</div>
+      <ButtonAlt
+        text='Antrior'
+        onClick={() => handlePageChange(-1)}
+        disabled={currentPage === 1}
+        onlyText
+      />
 
-      <div>
-        <button
-          className={classes({ disabled: currentPage === 1 })}
-          onClick={() => handlePageChange(-1)}
-        >
-          Atras
-        </button>
+      <TotalPages>{`${rowsName} ${currentPage} de ${totalPages}`}</TotalPages>
 
-        <button
-          className={classes({ disabled: currentPage === totalPages })}
-          onClick={() => handlePageChange(1)}
-        >
-          Adelante
-        </button>
-      </div>
+      <ButtonAlt
+        text='Siguiente'
+        onClick={() => handlePageChange(1)}
+        disabled={currentPage === totalPages}
+        onlyText
+      />
     </PaginatorContainer>
   );
 };

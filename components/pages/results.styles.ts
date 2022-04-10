@@ -74,6 +74,17 @@ export const ResultsWrapper = styled.div`
   @media screen and (max-width: 992px) {
     max-width: 90%;
   }
+
+  .paginator {
+    margin: 40px auto;
+
+    &.top {
+      margin: 40px auto 15px;
+    }
+    &.bottom {
+      margin: -10px auto 40px;
+    }
+  }
 `;
 
 export const TotalResults = styled.div`
@@ -97,13 +108,6 @@ export const PaginatorWrapper = styled.div`
 
   @media screen and (max-width: 840px) {
     flex-flow: column;
-  }
-  .paginator {
-    margin: 40px auto;
-
-    &.top {
-      margin: 40px auto;
-    }
   }
 `;
 

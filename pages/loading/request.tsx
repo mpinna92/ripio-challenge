@@ -21,7 +21,9 @@ const Loading = ({ }: any) => {
     const { data } = router.query;
 
     React.useEffect(() => {
-        router.replace(`/request/${data}`);
+        setTimeout(() => {
+            router.replace(`/request/${data}`);
+        }, 2500);
     }, [])
 
     return (
@@ -33,7 +35,7 @@ const Loading = ({ }: any) => {
                         <EthImg src='/images/eth.svg' />
                         <CoinImg src='/images/coin.svg' />
                     </LoadingAnimation>
-                    <LoadingText>Aguantá, estoy buscando...</LoadingText>
+                    <LoadingText>Aguantá, estamos buscando...</LoadingText>
                 </LoadingContent>
                 <Blob />
             </ LoadingContainer >

@@ -10,6 +10,8 @@ export interface ButtonAltProps {
   link?: string;
   target?: string;
   onClick?: any;
+  onlyText?: boolean;
+  disabled?: boolean;
 }
 
 export const ButtonAlt = ({
@@ -17,18 +19,20 @@ export const ButtonAlt = ({
   link = '',
   target = '_self',
   className,
-  onClick
+  onClick,
+  onlyText,
+  disabled
 }: ButtonAltProps) => {
   if (onClick) {
     return (
-      <ButtonWrapper className={classes(className)} onClick={onClick}>
+      <ButtonWrapper className={classes(className, {onlyText, disabled})} onClick={onClick}>
         {text}
       </ButtonWrapper>
     );
   }
   return (
     <Link href={link} passHref>
-      <ButtonWrapper target={target} className={classes(className)} >
+      <ButtonWrapper target={target} className={classes(className, {onlyText, disabled})} >
         {text}
       </ButtonWrapper>
     </Link>

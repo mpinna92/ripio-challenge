@@ -29,11 +29,10 @@ export interface TsxListProps {
 }
 
 const Tsx = ({ results }: any) => {
-    console.log(results?.result)
 
     // Pagination Logic
     const totalTsx = results?.result?.length;
-    const [tsxPerPage, setTsxPerPage] = React.useState(5);
+    const [tsxPerPage, setTsxPerPage] = React.useState(10);
     const [currentPage, setCurrentPage] = React.useState(1);
     const totalPages = Math.ceil(totalTsx / tsxPerPage);
 
@@ -78,11 +77,14 @@ const Tsx = ({ results }: any) => {
                                         <b>Bloque Nº:</b><span>⛏️ {i?.blockNumber}</span>
                                     </CardItem>
                                     <CardItem >
-                                        <b>Hash de Bloque:</b><span>🔗 {i?.blockHash}</span>
+                                        <b>Bloque hash:</b><span>🔗 {i?.blockHash}</span>
                                         <CopyButton value={i?.blockHash} />
                                     </CardItem>
                                     <CardItem >
-                                        <b>Gas usado:</b><span>⛽ {i?.gasUsed} </span>
+                                        <b>Gas:</b><span>⛽ {i?.gas} </span>
+                                    </CardItem>
+                                    <CardItem >
+                                        <b>Gas usado:</b><span>⚡ {i?.gasUsed} </span>
                                     </CardItem>
                                     <CardItem >
                                         <b>Desde:</b><span>↗️ {i?.from} </span>
@@ -150,7 +152,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 address: `${address}`,
                 startblock: '0',
                 page: '1',
-                offset: '30',
+                offset: '50',
                 sort: 'desc',
             }
         })
