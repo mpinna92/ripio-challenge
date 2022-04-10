@@ -46,7 +46,7 @@ export const Paginator = ({
   return (
     <PaginatorContainer className={className}>
       <ButtonAlt
-        text='Antrior'
+        text='Anterior'
         onClick={() => handlePageChange(-1)}
         disabled={currentPage === 1}
         onlyText

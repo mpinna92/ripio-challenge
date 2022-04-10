@@ -97,7 +97,7 @@ export const TotalResults = styled.div`
     text-align: center;
   }
   span {
-    color: ${(props: any) => props.theme.primary};
+    color: ${(props: any) => props.theme.light};
     font-weight: 600;
   }
 `;
