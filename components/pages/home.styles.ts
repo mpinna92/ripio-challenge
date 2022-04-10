@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import motion from 'framer-motion'
+import motion from "framer-motion";
 
 export const TestTsx = styled.div`
   font-size: 1.2rem;
@@ -18,7 +18,11 @@ export const TestTsx = styled.div`
   }
 `;
 
-export const TestTsxWrapper = styled.div`
+export const TestTsxWrapper = styled.div<{
+  animate?: any;
+  whileHover?: any;
+  transition?: any;
+}>`
   width: 100%;
   max-width: 500px;
   align-items: center;
