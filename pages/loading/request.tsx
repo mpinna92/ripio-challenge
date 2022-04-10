@@ -23,7 +23,7 @@ const Loading = ({ }: any) => {
     React.useEffect(() => {
         setTimeout(() => {
             router.replace(`/request/${data}`);
-        }, 2500);
+        }, 2000);
     }, [])
 
     return (
