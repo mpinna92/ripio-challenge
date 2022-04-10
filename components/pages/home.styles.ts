@@ -32,9 +32,6 @@ export const TestTsxWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 992px) {
-    max-width: 90%;
-  }
 `;
 
 export const ErrorMsg = styled.div`

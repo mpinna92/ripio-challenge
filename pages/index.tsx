@@ -4,6 +4,8 @@ import { classes } from 'helpers';
 import { Layout } from 'components/layout';
 import Link from "next/link";
 
+import { Button } from 'components/button';
+import { CopyButton } from 'components/copyButton';
 
 import {
   HomeWrapper,
@@ -14,8 +16,6 @@ import {
   ErrorMsg,
   TestTsxWrapper
 } from 'components/pages/home.styles';
-import { Button } from 'components/button';
-import { CopyButton } from 'components/copyButton';
 
 const Home = ({ }) => {
 

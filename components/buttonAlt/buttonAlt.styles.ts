@@ -52,6 +52,6 @@ export const ButtonWrapper = styled.a`
 
   &.disabled {
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 0.3;
   }
 `;
