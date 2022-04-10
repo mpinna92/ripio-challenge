@@ -6,8 +6,8 @@
 yarn
 ```
 
-2 - configura las variables de entorno:
-
+2 - configura las variables de entorno:  
+Crea un archivo `.env-local` con los siguientes parámetros:  
 ```bash
 ES_KEY=2B54VQTTPXFEP92AS1XZZP43DI2EMYIEJV
 API_URI=https://api.etherscan.io/api
