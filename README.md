@@ -1,5 +1,4 @@
-## 🏁 Inicio
-
+## 🏁 Inicio  
 1 - Instala todas las dependecias ejecutando:
 
 ```bash
@@ -21,8 +20,7 @@ yarn dev
 
 Abre [http://localhost:3000](http://localhost:3000) en  tu navegador para ver el resultado.
 
-## 💁 Demo
-
+## 💁 Demo  
 El proyecto se encuentra desplegado en Vercel App.  
 Puedes verlo 🔗[aquí](https://ripio-challenge.vercel.app/)
 
@@ -33,3 +31,12 @@ Puedes verlo 🔗[aquí](https://ripio-challenge.vercel.app/)
 🔗 Dynamic routing  
 🌐 Vercel App  
 🌌 Framer motion en animaciones
+
+## 🐇🥚 Easter eggs
+Hay un par de detalles ocultos en la app. Algunas pistas para encontrarlos:  
+
+ `¿Existe ésta página?`  
+ `¿Desde que provincia se hizo ésta app?`
+
+ 
+ 🙏 ¡Gracias por su tiempo!
