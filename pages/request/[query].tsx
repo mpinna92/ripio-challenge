@@ -154,7 +154,7 @@ const Tsx = ({ results }: any) => {
 										</CardItem>
 										<CardItem as={motion.div} variants={fadeInLeft} >
 											<b>Status:</b>
-											<span>{i?.txreceipt_status === '1' ? <Status className='success'>IN</Status> : <Status className='success'>OUT</Status>}</span>
+											<span>{i?.txreceipt_status === '1' ? <Status className='success'>IN</Status> : <Status className='error'>OUT</Status>}</span>
 										</CardItem>
 									</ResultCard>
 								)
