@@ -135,4 +135,8 @@ export const NoTsxWrapper = styled.div`
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+
+  .home--button {
+    margin: 0 auto;
+  }
 `;
