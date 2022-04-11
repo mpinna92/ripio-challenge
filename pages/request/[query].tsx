@@ -6,9 +6,12 @@ import { getTsxList } from 'services';
 import { PATHS } from 'config';
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { formatDistance } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 import { Paginator } from 'components/paginator';
 import { ButtonAlt } from 'components/buttonAlt';
+import { CopyButton } from 'components/copyButton';
 
 import {
 	NoTsxWrapper,
@@ -21,8 +24,8 @@ import {
 	TotalResults,
 	Status
 } from 'components/pages/results.styles';
-import { CopyButton } from 'components/copyButton';
-import { isConstructorDeclaration } from 'typescript';
+
+
 
 export interface TsxListProps {
 	options: [];
@@ -150,7 +153,12 @@ const Tsx = ({ results }: any) => {
 											<CopyButton value={i?.to} />
 										</CardItem>
 										<CardItem as={motion.div} variants={fadeInLeft} >
-											<b>Edad:</b><span>⌛ {new Date(i?.timeStamp * 1000).toLocaleString()}</span>
+											<b>Edad:</b><span>{`⌛ ...${formatDistance(new Date(i?.timeStamp * 1000), new Date(), {
+												addSuffix: true,
+												locale: es
+											})}`}
+
+											</span>
 										</CardItem>
 										<CardItem as={motion.div} variants={fadeInLeft} >
 											<b>Status:</b>
