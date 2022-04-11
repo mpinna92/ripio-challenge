@@ -58,8 +58,10 @@ const Tsx = ({ results }: any) => {
 			y: 0,
 			opacity: 1,
 			transition: {
+				type: 'spring',
 				duration: 0.8,
-				ease: easing
+				ease: easing,
+				staggerChildren: 0.1,
 			}
 		}
 	}
@@ -79,19 +81,6 @@ const Tsx = ({ results }: any) => {
 		}
 	}
 
-	const stagger = {
-		initial: {
-			y: -50,
-			opacity: 0
-		},
-		animate: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.1,
-			}
-		}
-	}
 
 	return (
 		<AnimatePresence>
@@ -133,7 +122,7 @@ const Tsx = ({ results }: any) => {
 									<ResultCard
 										as={motion.div}
 										key={key}
-										variants={stagger}
+										variants={fadeInUp}
 									>
 										<CardItem as={motion.div} variants={fadeInLeft}>
 											<b>TsxHash:</b><span>🔗 {i?.hash}</span>

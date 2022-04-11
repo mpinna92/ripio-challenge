@@ -33,6 +33,28 @@ const Home = ({ }) => {
 
   /*Handle animations */
   const easing = [0.6, -0.05, 0.01, 0.99]
+
+  const containerVars = {
+    hidden: {
+      y: -50,
+      opacity: 0
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        delay: 0.5,
+        ease: easing,
+        staggerChildren: 0.15,
+      }
+    },
+    exit: {
+      y: 200,
+      opacity: 0
+    }
+  }
+
   const fadeInUp = {
     initial: {
       y: -60,
@@ -48,28 +70,21 @@ const Home = ({ }) => {
     }
   }
 
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.15,
-      }
-    }
-  }
 
 
   return (
-    <AnimatePresence>
-      <Layout>
-        <Head>
-          <title>Maxi Pinna | Ripio Explorer</title>
-        </Head>
 
+    <Layout>
+      <Head>
+        <title>Maxi Pinna | Ripio Explorer</title>
+      </Head>
+      <AnimatePresence>
         <HomeWrapper
           as={motion.div}
-          initial='initial'
-          animate='animate'
-          exit={{ opacity: 0 }}
-          variants={stagger}
+          variants={containerVars}
+          initial='hidden'
+          animate='visible'
+          exit={'exit'}
         >
 
           <InputContainer as={motion.div} variants={fadeInUp}>
@@ -102,8 +117,9 @@ const Home = ({ }) => {
           </TestTsxWrapper>
 
         </HomeWrapper>
-      </Layout >
-    </AnimatePresence >
+      </AnimatePresence >
+    </Layout >
+
   )
 }
 

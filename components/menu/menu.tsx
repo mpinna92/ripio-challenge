@@ -13,13 +13,14 @@ import {
 const easing = [0.6, -0.05, 0.01, 0.99]
 const fadeInUp = {
   initial: {
-    opacity: 0
+    opacity: 0,
+    y: -30,
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.8,
       ease: easing
     }
   }
@@ -33,11 +34,9 @@ export const Menu = ({ }) => {
         initial='initial'
         animate='animate'
         exit={{ opacity: 0 }}
+        variants={fadeInUp}
       >
-        <BrandWrapper
-          as={motion.div}
-          variants={fadeInUp}
-        >
+        <BrandWrapper >
           <Link href={PATHS.ROOT}><a>
             <BranImg src='/images/brand.svg' />
           </a></Link>
