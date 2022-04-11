@@ -131,7 +131,7 @@ export const NoTsxText = styled.div`
   }
 `;
 
-export const NoTsxWrapper = styled.div`
+export const NoTsxWrapper = styled.div<MotionProps>`
   width: 100%;
   max-width: 800px;
   margin: 0 auto;

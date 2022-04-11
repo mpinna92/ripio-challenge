@@ -1,10 +1,11 @@
 import React from 'react';
+import Head from 'next/head'
 import { Layout } from 'components/layout';
 import { GetServerSideProps } from 'next';
 import { getTsxList } from 'services';
 import { PATHS } from 'config';
 import { AnimatePresence, motion } from 'framer-motion'
-
+import { useRouter } from 'next/router'
 
 import { Paginator } from 'components/paginator';
 import { ButtonAlt } from 'components/buttonAlt';
@@ -21,6 +22,7 @@ import {
 	Status
 } from 'components/pages/results.styles';
 import { CopyButton } from 'components/copyButton';
+import { isConstructorDeclaration } from 'typescript';
 
 export interface TsxListProps {
 	options: [];
@@ -28,6 +30,7 @@ export interface TsxListProps {
 }
 
 const Tsx = ({ results }: any) => {
+	const router = useRouter();
 
 	// Pagination Logic
 	const totalTsx = results?.result?.length;
@@ -90,11 +93,12 @@ const Tsx = ({ results }: any) => {
 		}
 	}
 
-
 	return (
 		<AnimatePresence>
 			<Layout >
-
+				<Head>
+					<title>🔗 {`${router?.query?.query}`}</title>
+				</Head>
 				{results?.message === 'OK' &&
 					<ResultsWrapper >
 						<PaginatorWrapper
@@ -180,22 +184,35 @@ const Tsx = ({ results }: any) => {
 					</ResultsWrapper>
 				}
 
+				{results === undefined &&
+					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
+						<motion.div variants={fadeInUp}>
+							<NoTsxText>Direccción inválida...</NoTsxText>
+							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
+						</motion.div>
+					</NoTsxWrapper>
+				}
 
-				{(results?.status === '0' && results?.message === 'NOTOK') || (results === undefined) &&
-					<NoTsxWrapper>
-						<NoTsxText>Direccción inválida...</NoTsxText>
-						<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button'/>
+				{(results?.status === '0' && results?.message === 'NOTOK') &&
+					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
+						<motion.div variants={fadeInUp}>
+							<NoTsxText>Direccción inválida...</NoTsxText>
+							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
+						</motion.div>
+
 					</NoTsxWrapper>
 				}
 
 				{(results?.status === '0' && results?.message !== 'NOTOK') &&
-					<NoTsxWrapper>
-						<NoTsxText>No se encontraron transaccciones...</NoTsxText>
-						<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button'/>
+					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
+						<motion.div variants={fadeInUp}>
+							<NoTsxText>No se encontraron transaccciones...</NoTsxText>
+							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
+						</motion.div>
 					</NoTsxWrapper>
 				}
 			</Layout>
-		</AnimatePresence>
+		</AnimatePresence >
 	)
 };
 

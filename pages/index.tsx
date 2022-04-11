@@ -24,16 +24,14 @@ const Home = ({ }) => {
   /* Handle principal value*/
   const [value, setValue] = React.useState<string>('');
   const [errorInput, setErrorInput] = React.useState<string>();
-
   const checkValue = (v: string) => {
     v === '' && setErrorInput('Ey! No escribiste nada...')
   }
-
   React.useEffect(() => {
     value != '' && setErrorInput('')
   }, [value])
 
-  /*Handle animatios */
+  /*Handle animations */
   const easing = [0.6, -0.05, 0.01, 0.99]
   const fadeInUp = {
     initial: {
