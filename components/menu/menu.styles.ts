@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { MotionProps } from "framer-motion";
 
 export const BranImg = styled.img`
   width: 170px;
@@ -12,7 +13,7 @@ export const BranImg = styled.img`
   }
 `;
 
-export const BrandWrapper = styled.div`
+export const BrandWrapper = styled.div<MotionProps>`
   width: auto;
   height: 100%;
   align-items: center;
@@ -25,7 +26,7 @@ export const BrandWrapper = styled.div`
   }
 `;
 
-export const MenuContainer = styled.nav`
+export const MenuContainer = styled.nav<MotionProps>`
   width: 100%;
   height: 80px;
   align-items: center;

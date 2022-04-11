@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { MotionProps } from "framer-motion";
 
 export const Status = styled.div`
   width: 20px;
@@ -23,7 +24,7 @@ export const Status = styled.div`
   }
 `;
 
-export const CardItem = styled.div`
+export const CardItem = styled.div<MotionProps>`
   width: 100%;
   align-items: center;
   display: flex;
@@ -49,7 +50,7 @@ export const CardItem = styled.div`
   }
 `;
 
-export const ResultCard = styled.div`
+export const ResultCard = styled.div<MotionProps>`
   width: 100%;
   margin-bottom: 50px;
   border-radius: 15px;
@@ -61,7 +62,7 @@ export const ResultCard = styled.div`
   padding: 30px;
 `;
 
-export const ResultList = styled.div`
+export const ResultList = styled.div<MotionProps>`
   width: 100%;
   margin: 0 auto;
 `;
@@ -87,7 +88,7 @@ export const ResultsWrapper = styled.div`
   }
 `;
 
-export const TotalResults = styled.div`
+export const TotalResults = styled.div<MotionProps>`
   width: 100%;
   color: ${(props: any) => props.theme.white};
   font-size: 1rem;
@@ -102,7 +103,7 @@ export const TotalResults = styled.div`
   }
 `;
 
-export const PaginatorWrapper = styled.div`
+export const PaginatorWrapper = styled.div<MotionProps>`
   width: 100%;
   display: flex;
   font-size: 1.5rem;

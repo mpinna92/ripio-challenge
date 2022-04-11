@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
+import { MotionProps } from "framer-motion";
 
-export const ButtonWrapper = styled.a`
+
+export const ButtonWrapper = styled.a<MotionProps>`
   width: 38px;
   height: 38px;
   align-items: center;
@@ -15,7 +17,6 @@ export const ButtonWrapper = styled.a`
   border-style: inset;
   display: flex;
   justify-content: center;
-  transition: all 0.3s ease-in-out;
   margin: 0;
   position: relative;
   svg {
@@ -31,8 +32,5 @@ export const ButtonWrapper = styled.a`
 
   &:hover {
     cursor: pointer;
-    svg {
-      left: 58%;
-    }
   }
 `;

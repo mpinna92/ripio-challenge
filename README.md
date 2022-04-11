@@ -31,4 +31,5 @@ Puedes verlo 🔗[aquí](https://ripio-challenge.vercel.app/)
 💅 Styled components  
 ✨ SSR (Server Side Rendering)  
 🔗 Dynamic routing  
-🌐 Vercel App
+🌐 Vercel App  
+🌌 Framer motion en animaciones

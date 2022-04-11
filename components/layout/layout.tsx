@@ -12,13 +12,16 @@ export interface LayoutProps {
   children?: React.ReactNode;
 }
 
+
+
 export const Layout = ({ children }: LayoutProps) => {
   return (
       <LayoutWrapper>
         <Gradient />
         <Content>
           <GlobalStyling styles={GlobalStyles} />
-          <Menu />
+          <Menu
+          />
           {children}
           <Footer />
         </Content>
