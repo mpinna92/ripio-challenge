@@ -154,7 +154,7 @@ const Tsx = ({ results }: any) => {
 										</CardItem>
 										<CardItem as={motion.div} variants={fadeInLeft} >
 											<b>Status:</b>
-											<span>{i?.txreceipt_status === '1' ? <Status className='success'>IN</Status> : <Status className='success'>OUT</Status>}</span>
+											<span>{i?.txreceipt_status === '1' ? <Status className='success'>IN</Status> : <Status className='error'>OUT</Status>}</span>
 										</CardItem>
 									</ResultCard>
 								)
@@ -176,7 +176,7 @@ const Tsx = ({ results }: any) => {
 				{results === undefined &&
 					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
 						<motion.div variants={fadeInUp}>
-							<NoTsxText>Direccción inválida...</NoTsxText>
+							<NoTsxText>Dirección inválida...</NoTsxText>
 							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
 						</motion.div>
 					</NoTsxWrapper>
@@ -185,7 +185,7 @@ const Tsx = ({ results }: any) => {
 				{(results?.status === '0' && results?.message === 'NOTOK') &&
 					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
 						<motion.div variants={fadeInUp}>
-							<NoTsxText>Direccción inválida...</NoTsxText>
+							<NoTsxText>Dirección inválida...</NoTsxText>
 							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
 						</motion.div>
 
@@ -195,7 +195,7 @@ const Tsx = ({ results }: any) => {
 				{(results?.status === '0' && results?.message !== 'NOTOK') &&
 					<NoTsxWrapper as={motion.div} initial='initial' animate='animate' exit={{ opacity: 0 }} >
 						<motion.div variants={fadeInUp}>
-							<NoTsxText>No se encontraron transaccciones...</NoTsxText>
+							<NoTsxText>No se encontraron transacciones...</NoTsxText>
 							<ButtonAlt text='Volver al home!' link={PATHS.ROOT} className='home--button' />
 						</motion.div>
 					</NoTsxWrapper>
