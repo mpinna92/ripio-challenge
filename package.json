@@ -18,7 +18,7 @@
     "mobx": "^6.3.3",
     "mobx-keystone": "^0.63.1",
     "mobx-react-lite": "^3.2.1",
-    "next": "11.1.2",
+    "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "typescript": "^4.4.3"
