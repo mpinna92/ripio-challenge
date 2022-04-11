@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
+import { MotionProps } from "framer-motion";
 
 const pulseBlue = keyframes`
   0% {
@@ -78,7 +79,7 @@ export const EthImg = styled.img`
   animation-timing-function: ease-in-out;
 `;
 
-export const LoadingAnimation = styled.div`
+export const LoadingAnimation = styled.div<MotionProps>`
   width: 100%;
   max-width: 400px;
   color: ${(props: any) => props.theme.white};
@@ -94,7 +95,7 @@ export const LoadingAnimation = styled.div`
   top: -30px;
 `;
 
-export const LoadingText = styled.div`
+export const LoadingText = styled.div<MotionProps>`
   width: 90%;
   max-width: 400px;
   color: ${(props: any) => props.theme.white};
@@ -104,7 +105,7 @@ export const LoadingText = styled.div`
   text-align: center;
 `;
 
-export const LoadingContent = styled.div`
+export const LoadingContent = styled.div<MotionProps>`
   width: 100%;
   height: 100%;
   align-items: center;

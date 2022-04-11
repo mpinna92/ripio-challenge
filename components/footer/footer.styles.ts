@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { MotionProps } from "framer-motion";
 
-export const TucumanText = styled.div`
+export const TucumanText = styled.div<MotionProps>`
   height: 100%;
   align-items: center;
   color: ${(props: any) => props.theme.medium};
@@ -45,7 +46,7 @@ export const GitHubText = styled.div`
   }
 `;
 
-export const GitHubWrapper = styled.div`
+export const GitHubWrapper = styled.div<MotionProps>`
   height: 100%;
   align-items: center;
   display: flex;
@@ -82,7 +83,7 @@ export const GitHubWrapper = styled.div`
   }
 `;
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer<MotionProps>`
   width: 100%;
   height: 80px;
   margin-top: auto;

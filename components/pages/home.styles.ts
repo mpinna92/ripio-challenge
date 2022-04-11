@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import motion from "framer-motion";
+import { MotionProps } from "framer-motion";
 
 export const TestTsx = styled.div`
   font-size: 1.2rem;
@@ -18,11 +18,7 @@ export const TestTsx = styled.div`
   }
 `;
 
-export const TestTsxWrapper = styled.div<{
-  animate?: any;
-  whileHover?: any;
-  transition?: any;
-}>`
+export const TestTsxWrapper = styled.div<MotionProps>`
   width: 100%;
   max-width: 500px;
   align-items: center;
@@ -136,7 +132,7 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<MotionProps>`
   width: 100%;
   max-width: 500px;
   margin: 0 auto 20px;
@@ -150,7 +146,9 @@ export const InputContainer = styled.div`
   }
 `;
 
-export const HomeWrapper = styled.div`
+
+
+export const HomeWrapper = styled.div<MotionProps>`
   width: 100%;
   max-width: 90%;
   height: 100%;

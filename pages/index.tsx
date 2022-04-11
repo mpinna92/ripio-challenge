@@ -33,6 +33,30 @@ const Home = ({ }) => {
     value != '' && setErrorInput('')
   }, [value])
 
+  /*Handle animatios */
+  const easing = [0.6, -0.05, 0.01, 0.99]
+  const fadeInUp = {
+    initial: {
+      y: -60,
+      opacity: 0
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: easing
+      }
+    }
+  }
+
+  const stagger = {
+    animate: {
+      transition: {
+        staggerChildren: 0.15,
+      }
+    }
+  }
 
 
   return (
@@ -41,9 +65,16 @@ const Home = ({ }) => {
         <Head>
           <title>Maxi Pinna | Ripio Explorer</title>
         </Head>
-        <HomeWrapper>
 
-          <InputContainer>
+        <HomeWrapper
+          as={motion.div}
+          initial='initial'
+          animate='animate'
+          exit={{ opacity: 0 }}
+          variants={stagger}
+        >
+
+          <InputContainer as={motion.div} variants={fadeInUp}>
             <InputText>Encuentra las transacciones de una dirección...</InputText>
             <InputWrapper>
               <Input
@@ -63,15 +94,8 @@ const Home = ({ }) => {
             <ErrorMsg className={classes({ show: !!errorInput })}>{errorInput}</ErrorMsg>
 
           </InputContainer>
-          <TestTsxWrapper
-            as={motion.div}
 
-            animate={{
-              y: [-40, 0],
-              opacity: [0, 1]
-            }}
-            transition={{ duration: 0.5 }}
-          >
+          <TestTsxWrapper as={motion.div} variants={fadeInUp} >
             <TestTsx>
               <p>Usame para testear 😉</p>
               0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce
@@ -81,7 +105,7 @@ const Home = ({ }) => {
 
         </HomeWrapper>
       </Layout >
-    </AnimatePresence>
+    </AnimatePresence >
   )
 }
 

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
+
 export const Content = styled.div`
   width: 100%;
   height: 100%;
