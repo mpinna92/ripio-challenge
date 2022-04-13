@@ -50,9 +50,12 @@ const Home = ({ }) => {
       }
     },
     exit: {
-      y: 200,
-      opacity: 0
-    }
+      opacity: 0,
+      transition: {
+        type: 'spring',
+        ease: easing,
+      }
+    },
   }
 
   const fadeInUp = {

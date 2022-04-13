@@ -28,6 +28,12 @@ export const Gradient = styled.div`
   left: 0;
 `;
 
+export const BgApp = styled.div`
+  width: 100%;
+  height: 100%;
+  background: ${(props: any) => props.theme.bg};
+`;
+
 export const LayoutWrapper = styled.div`
   width: 100%;
   background-color: ${(props: any) => props.theme.bg};
