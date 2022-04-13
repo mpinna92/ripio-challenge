@@ -89,7 +89,12 @@ const Tsx = ({ results }: any) => {
 		<AnimatePresence>
 			<Layout >
 				<Head>
-					<title>🔗 {`${router?.query?.query}`}</title>
+					<title>
+						{router?.query?.query
+							? `🔗 ${router?.query?.query}`
+							: 'Maxi Pinna | Ripio Explorer'
+						}
+					</title>
 				</Head>
 				{results?.message === 'OK' &&
 					<ResultsWrapper >
